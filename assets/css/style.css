@@ -43,6 +43,8 @@ body {
   margin: 0;
 }
 
+.link { color: #edede3; } /* CSS link color */
+
 .legend {
   padding: 10px;
   font-family: Sanchez, serif;
