@@ -77,8 +77,7 @@
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="This won't help you."
                         aria-label="Search">
-                    <a href="esponja.html"><button class="btn btn-primary my-2 my-sm-0"
-                            type="submit">Search</button></a>
+                    <button id="esponja" class="btn btn-primary my-2 my-sm-0" type="text">Search</button>
                 </form>
                 <nav class="col-md-2 d-sm-block d-md-none bg-dark sidebar sidebar-sticky ">
                     <a class="nav-link" href="index.html"><i class="fas fa-home"></i><span
@@ -179,14 +178,19 @@
                                 <h3 class="card-header h5">Aranza Ballesteros</h3>
                                 <div class="card-body">
 
-                                    <img src="assets/brand/aranza.jpeg" class="pull-left mr-4"
+                                    <img src="assets/brand/aranzazu.png" class="pull-left mr-4"
                                         title="Image of Project Contributor Aranza Ballesteros" width="30%"
                                         align='left'>
 
-                                    <p>Aranza brings a striking organization to the project. She brings a
-                                        background in data journalism to bear upon trying to answer some tough
-                                        questions.
-                                    </p>
+                                    <p>Aranza, short for Aranzazu, is a project manager who focuses on operational
+                                        effectiveness and efficiency. She believes that understanding our current
+                                        landscape though clear data is the first step towards making meaningful changes
+                                        in our processes and systems.</p>
+                                    <p>
+                                        Her interest in data arose during her time as a journalist from her admiration
+                                        of data activists' work to drive government accountability. Now, she uses her
+                                        love for storytelling to tell data stories about people, from diversity in the
+                                        workplace to the spread of misinformation in social media.</p>
                                     <p>Aranza was the deployer of this project's sentiment analysis and served
                                         as the Tableau consultant. </p>
 
@@ -296,7 +300,15 @@
 
     <!-- BOOTSTRAP JS-->
     <script src="assets/js/bootstrap.bundle.js"></script>
-
+    <script>// FIlter anything
+        $(document).ready(function () {
+            $("#esponja").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#border *").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });</script>
 
 </body>
 
